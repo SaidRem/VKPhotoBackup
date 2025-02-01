@@ -17,7 +17,7 @@ def main():
                                user_id=user_id,
                                save_dir="vk_photos",
                                exporter=YandexDiskUploader(token_ya_disk))
-    vk_backup.export()
+    vk_backup.export(limit=5)
 
 
 if __name__ == "__main__":
