@@ -15,7 +15,6 @@ def main():
 
     vk_backup = VKPhotoFetcher(access_token=ACCESS_TOKEN,
                                user_id=user_id,
-                               save_dir="vk_photos",
                                exporter=YandexDiskUploader(token_ya_disk))
     vk_backup.export(limit=5)
 

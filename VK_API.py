@@ -6,7 +6,7 @@ import requests
 class VKPhotoFetcher:
     BASE_URL = "https://api.vk.com/method/photos.get"
 
-    def __init__(self, access_token, user_id, save_dir, exporter=None):
+    def __init__(self, access_token, user_id, save_dir="vk", exporter=None):
         """
         Initializes VKPhotoFetcher with API credentials and save directory.
         """
