@@ -1,6 +1,6 @@
-import requests
 import os
 import json
+import requests
 
 
 class VKPhotoFetcher:

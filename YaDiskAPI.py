@@ -1,6 +1,6 @@
-import requests
-import datetime
 import os
+import datetime
+import requests
 
 
 class YandexDiskUploader:
