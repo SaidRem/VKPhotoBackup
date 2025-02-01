@@ -19,7 +19,7 @@ class VKPhotoFetcher:
         else:
             self._exporter = exporter
 
-    def fetch_photos(self, album_id="profile", version="5.131"):
+    def fetch_photos(self, album_id="profile", version="5.131", limit=5):
         """
         Fetches photos from the given VK album.
         """
@@ -38,7 +38,7 @@ class VKPhotoFetcher:
             data = response.json()
 
             if "response" in data:
-                return data["response"]["items"]
+                return data["response"]["items"][:limit]
             else:
                 raise ValueError(f"VK API Error: {data}")
         except requests.RequestException as e:
@@ -89,12 +89,12 @@ class VKPhotoFetcher:
 
         print(f"Metadata saved to {json_path}")
 
-    def export(self):
+    def export(self, limit=5):
         if not self._exporter:
             print("Do not have exporter")
             return
 
-        photos = self.fetch_photos()
+        photos = self.fetch_photos(limit=limit)
         metadata = []
         file_names = []
 
