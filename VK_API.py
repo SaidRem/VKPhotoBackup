@@ -126,7 +126,6 @@ class VKPhotoFetcher:
         print(f"Metadata saved to {json_path}")
 
 
-# Example Usage
 if __name__ == "__main__":
     ACCESS_TOKEN = "enter your token"  # Replace with your token from vk
     USER_ID = "enter id"   # Replace with the actual VK user ID

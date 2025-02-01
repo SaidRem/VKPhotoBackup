@@ -80,7 +80,6 @@ class YandexDiskUploader:
             print(f"Error uploading from URL: {response.json()}")
 
 
-# Example Usage
 if __name__ == "__main__":
     TOKEN = ""  # Replace with your Yandex Disk token
 
